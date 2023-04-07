@@ -17,13 +17,13 @@ const MyNav = () => (
           href="#features"
           className="text-white text-center me-3 border rounded-5 px-4 nav-btn"
         >
-          Features
+          Testo
         </Nav.Link>
         <Nav.Link
           href="#pricing"
           className="text-white text-center border rounded-5 px-4 nav-btn"
         >
-          Pricing
+          Testo
         </Nav.Link>
       </Nav>
     </Container>

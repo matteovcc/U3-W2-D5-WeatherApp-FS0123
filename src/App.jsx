@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyNav from "./components/MyNav";
 import HomeIntroduction from "./components/HomeIntroduction";
 import MainSearch from "./components/MainSearch";
+import MyFooter from "./components/MyFooter";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route></Route>
         </Routes>
+        <MyFooter />
       </BrowserRouter>
     </div>
   );
