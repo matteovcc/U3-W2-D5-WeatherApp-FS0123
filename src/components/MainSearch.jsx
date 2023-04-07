@@ -47,7 +47,6 @@ const MainSearch = () => {
 
   useEffect(() => {
     fetchWeather();
-    // handleSubmit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cities]);
 
@@ -71,16 +70,6 @@ const MainSearch = () => {
           <div className="border border-warning rounded px-2 mt-2 d-flex align-items-center div-city">
             {cities.length > 0 && (
               <>
-                {/* <p className="text-white fw-bold my-1">
-                  {cities[0].name},{cities[0].state}
-                  {cities[0].country} |
-                </p>
-                <p className="text-white  my-1 ms-auto">
-                  La temperatura è:
-                  {weather.main.temp},umidità {weather.main.humidity},
-                  pressione:
-                  {weather.main.pressure}
-                </p> */}
                 <Container className="d-flex justify-content-between p-1 text-white mt-2">
                   <div className="">
                     <h2 className="text-white fw-bold my-1">
@@ -103,20 +92,6 @@ const MainSearch = () => {
                     </p>
                     <p className="fw-bold mb-0">{cities[0].country}</p>
                     <p className="fw-bold">{cities[0].state}</p>
-                    {/* <h3 className="text-white fw-bold my-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="26"
-                        height="26"
-                        fill="currentColor"
-                        className="bi bi-thermometer-low me-0"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585a1.5 1.5 0 0 1 1 1.415z" />
-                        <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z" />
-                      </svg>
-                      {weather.main.temp} °
-                    </h3> */}
                   </div>
                   <div className="text-center">
                     <h3 className="fw-bold mb-0">
