@@ -1,20 +1,19 @@
-// import { Row, Col } from "react-bootstrap";
-// const City = ({ data }) => {
-//   return (
-//     <Row
-//       className="mx-0 mt-3 p-3"
-//       style={{ border: "1px solid #00000033", borderRadius: 4 }}
-//     >
-//       <Col xs={3}>
-//         <p>{data.name}</p>
-//       </Col>
-//       <Col xs={9}>
-//         <a href={data.state} target="_blank" rel="noreferrer">
-//           {data.country}
-//         </a>
-//       </Col>
-//     </Row>
-//   );
-// };
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-// export default City;
+function WithHeaderExample() {
+  return (
+    <Card>
+      <Card.Header>Featured</Card.Header>
+      <Card.Body>
+        <Card.Title>Special title treatment</Card.Title>
+        <Card.Text>
+          With supporting text below as a natural lead-in to additional content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+  );
+}
+
+export default WithHeaderExample;
