@@ -4,10 +4,7 @@ import Container from "react-bootstrap/Container";
 
 const HomeIntroduction = () => (
   <Container className="my-4">
-    <Card
-      bg="transparent"
-      className="text-white border-top-1 border-bottom-1 border-end-0 border-start-1 "
-    >
+    <Card bg="transparent" className="text-white border-1 border-white ">
       <Card.Header as="h3">Welcome</Card.Header>
       <Card.Body>
         <Card.Title as="h1">Meteo App 🌤️</Card.Title>

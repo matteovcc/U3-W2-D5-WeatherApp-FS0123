@@ -28,6 +28,14 @@
 #get-started-btn:hover {
   transform: translateY(-8px);
 }
-/* .div-city:hover {
+.div-city {
+  background: rgb(244, 167, 23);
+  background: radial-gradient(
+    circle,
+    rgba(244, 167, 23, 1) 0%,
+    rgba(44, 35, 93, 1) 98%
+  );
+}
+#footer {
   background-color: rgb(244, 167, 23);
-} */
+}

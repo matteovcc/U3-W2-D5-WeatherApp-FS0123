@@ -85,11 +85,25 @@ const MainSearch = () => {
                   <div className="">
                     <h2 className="text-white fw-bold my-1">
                       {cities[0].name}{" "}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="currentColor"
+                        className="bi bi-geo-alt ms-0 mb-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                      </svg>
                     </h2>
                     <span className="fs-6">{weather.weather[0].main}</span>
+                    <p className="fst-italic">
+                      {weather.weather[0].description}
+                    </p>
                     <p className="fw-bold mb-0">{cities[0].country}</p>
                     <p className="fw-bold">{cities[0].state}</p>
-                    <h3 className="text-white fw-bold my-1">
+                    {/* <h3 className="text-white fw-bold my-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26"
@@ -102,34 +116,24 @@ const MainSearch = () => {
                         <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z" />
                       </svg>
                       {weather.main.temp} °
-                    </h3>
+                    </h3> */}
                   </div>
                   <div className="text-center">
-                    <p className="fw-bold mb-0">Humidity</p>
-                    <p className="fw-semibold text-center">
-                      {weather.main.humidity} %
-                    </p>
-                    <p className="fw-bold mb-0">Pressure</p>
-                    <p className="fw-semibold text-center">
-                      {weather.main.pressure} Pa
-                    </p>
-                  </div>
-                  <div>
                     <h3 className="fw-bold mb-0">
+                      Wind
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26"
                         height="26"
                         fill="currentColor"
-                        className="bi bi-wind me-3"
+                        className="bi bi-wind ms-2"
                         viewBox="0 0 16 16"
                       >
                         <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z" />
                       </svg>
-                      Wind
                     </h3>
                     <div className="d-flex justify-content-evenly">
-                      <p className="fw-semibold">
+                      <p className="fw-semibold ">
                         {weather.wind.speed}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -162,6 +166,44 @@ const MainSearch = () => {
                         </svg>
                       </p>
                     </div>
+                    <h3 className="text-white text-center fw-bold my-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="currentColor"
+                        className="bi bi-thermometer-low me-0 mb-1"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585a1.5 1.5 0 0 1 1 1.415z" />
+                        <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z" />
+                      </svg>
+                      {weather.main.temp} °
+                    </h3>
+                    <div className="d-flex justify-content-between">
+                      <div className="text-center me-1">
+                        <p className="mb-0">Percepita:</p>
+                        <p>{weather.main.feels_like}°</p>
+                      </div>
+                      <div className="text-center me-1">
+                        <p className="mb-0">Min:</p>
+                        <p>{weather.main.temp_min}°</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="mb-0">Max:</p>
+                        <p>{weather.main.temp_max}°</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <p className="fw-bold mb-0">Humidity</p>
+                    <p className="fw-semibold text-center">
+                      {weather.main.humidity} %
+                    </p>
+                    <p className="fw-bold mb-0">Pressure</p>
+                    <p className="fw-semibold text-center">
+                      {weather.main.pressure} Pa
+                    </p>
                   </div>
                 </Container>
               </>
