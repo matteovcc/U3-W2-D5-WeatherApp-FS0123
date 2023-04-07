@@ -5,6 +5,7 @@ import MyNav from "./components/MyNav";
 import HomeIntroduction from "./components/HomeIntroduction";
 import MainSearch from "./components/MainSearch";
 import MyFooter from "./components/MyFooter";
+import City from "./components/City";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <HomeIntroduction />
         <MainSearch />
         <Routes>
-          <Route></Route>
+          <Route path="/city" element={<City />} />
         </Routes>
         <MyFooter />
       </BrowserRouter>
